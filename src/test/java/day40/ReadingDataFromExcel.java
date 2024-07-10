@@ -57,26 +57,48 @@ public class ReadingDataFromExcel {
 
         //second approach print any number of cells
 
-        for(Row row:sheet){
+//        for(Row row:sheet){
+//
+//            for(int j=0;j<row.getLastCellNum();j++){
+//                Cell cell = row.getCell(j);
+//                switch (cell.getCellType()){
+//                    case STRING:
+//                        System.out.print(cell.getStringCellValue()+"\t");
+//                        break;
+//                    case NUMERIC:
+//                        System.out.print(cell.getNumericCellValue()+"\t");
+//                        break;
+//                    case BOOLEAN:
+//                        System.out.print(cell.getBooleanCellValue()+"\t");
+//                        break;
+//                    case FORMULA:
+//                        System.out.print(cell.getCellFormula()+"\t");
+//                        break;
+//                    default:
+//                        System.out.print("Unknown value"+"\t");
+//                }
+//            }
+//            System.out.println();
+//        }
 
-            for(int j=0;j<row.getLastCellNum();j++){
+
+        //third approach
+
+        //find total row numbers
+        int totalRows = sheet.getLastRowNum();
+
+        //find total cell numbers in first row
+        int totalCells = sheet.getRow(0).getLastCellNum();
+
+        for (int i = 0; i < totalRows; i++) {
+
+            //create rows
+            Row row = sheet.getRow(i);
+
+            for (int j = 0; j < totalCells; j++) {
+                //create cell
                 Cell cell = row.getCell(j);
-                switch (cell.getCellType()){
-                    case STRING:
-                        System.out.print(cell.getStringCellValue()+"\t");
-                        break;
-                    case NUMERIC:
-                        System.out.print(cell.getNumericCellValue()+"\t");
-                        break;
-                    case BOOLEAN:
-                        System.out.print(cell.getBooleanCellValue()+"\t");
-                        break;
-                    case FORMULA:
-                        System.out.print(cell.getCellFormula()+"\t");
-                        break;
-                    default:
-                        System.out.print("Unknown value"+"\t");
-                }
+                System.out.print(cell.toString() + "\t"); //print cell value to string
             }
             System.out.println();
         }
