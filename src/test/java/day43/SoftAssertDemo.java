@@ -16,11 +16,16 @@ public class SoftAssertDemo {
         softAssert.assertEquals(1, 2, "First assertion failed");
         System.out.println("First assertion completed");
 
+
+
         softAssert.assertTrue(false, "Second assertion failed");
         System.out.println("Second assertion completed");
 
         softAssert.assertFalse(true, "Third assertion failed");
         System.out.println("Third assertion completed");
+
+        softAssert.assertFalse(false, "Fourth assertion passed");
+        System.out.println("Fourth assertion completed");
 
         // Call assertAll() to aggregate results and report all failures
         System.out.println("All assertions checked");
