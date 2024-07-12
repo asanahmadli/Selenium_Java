@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="grouping in suite">
+    <test name="day44">
+        <groups>
+            <run>
+                <include name="functional"/>
+<!--                <exclude name="sanity"/>            &lt;!&ndash; all sanity executed&ndash;&gt;-->
+<!--                <exclude name="regression"/>        &lt;!&ndash; regression tests skipped&ndash;&gt;-->
+            </run>
+        </groups>
+
+        <classes>
+            <class name="day44.LoginTests"/>
+            <class name="day44.PaymentTests"/>
+            <class name="day44.SignUpTests"/>
+        </classes>
+
+
+    </test>
+</suite>

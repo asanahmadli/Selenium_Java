@@ -2,18 +2,11 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite">
     <test verbose="2" preserve-order="true"
-          name="C:/Users/asana/eclipse-workspace/seleniumwebdriver/src/test/java/day43">
+          name="C:/Users/asana/eclipse-workspace/seleniumwebdriver/src/test/java/day44">
         <classes>
-            <class name="day43.AnnotationsDemo1">
+            <class name="day44.DependencyMethods">
                 <methods>
-                    <include name="search"/>
-                    <include name="advancedSearch"/>
-                </methods>
-            </class>
-            <class name="day43.BeforeClassAfterClass">
-                <methods>
-                    <include name="search"/>
-                    <include name="advancedSearch"/>
+                    <include name="openApp"/>
                 </methods>
             </class>
         </classes>

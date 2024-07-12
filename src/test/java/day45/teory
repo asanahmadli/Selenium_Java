@@ -1,0 +1,8 @@
+Parameterization
+1.@DataProvider
+2.using xml file -- parallel testing
+
+after set up @DataProvide give name and dataprovide returns Object 2 dimensial array
+@DataProvide(name="dp")
+dataprovider pass data from 2 dimensial array without using looping
+just add dtaprovider name to test and run
